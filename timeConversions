@@ -1,0 +1,16 @@
+def timeConversion(s):
+    
+    hour = int(s[0:2])
+    minute = (s[3:5])
+    second = (s[6:8])
+    if hour == 12 and s[-2:] == 'PM':
+        hour = 12
+    elif s[-2:] == 'PM':
+        hour += 12
+    elif s[-2:] == 'AM' and hour == 12:
+        hour = '00'
+    hour = str(hour)
+    if len(hour) < 2:
+        hour = '0' + hour
+        
+    return (hour + ':' + minute + ':' + second)
