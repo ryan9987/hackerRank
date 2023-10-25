@@ -1,0 +1,14 @@
+def plusMinus(arr):
+    zero = 0
+    positive = 0
+    negative = 0
+    for num in arr:
+        if num == 0:
+            zero += 1
+        if num > 0:
+            positive += 1
+        if num < 0:
+            negative += 1
+    print(round((positive/len(arr)), 5))
+    print(round((negative/len(arr)), 5))
+    print(round((zero/len(arr)), 5))
