@@ -1,0 +1,10 @@
+def miniMaxSum(arr):
+    max_num = 0
+    min_num = 0
+    for num in arr:
+        if num < max(arr):
+            min_num += num
+        if num > min(arr):
+            max_num += num
+    print(min_num, max_num)
+        
