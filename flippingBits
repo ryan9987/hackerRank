@@ -1,0 +1,9 @@
+def flippingBits(n):
+    result = ''
+    unsigned_int = bin(n)[2:].zfill(32)
+    for digit in str(unsigned_int):
+        if digit == '0':
+            result += '1'
+        if digit == '1':
+            result += '0'
+    return int(result, 2)
