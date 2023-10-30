@@ -1,0 +1,10 @@
+def diagonalDifference(arr):
+    total = 0
+    index = 1
+    right = 0
+    for i, left_right in enumerate(arr):
+        total += left_right[i]
+    for right_left in arr:   
+        right += right_left[-index]
+        index += 1
+    return abs(total - right)
