@@ -1,0 +1,7 @@
+def marsExploration(s):
+    default_msg = 'SOS' * int(len(s) / 3)
+    count = 0
+    for index, char in enumerate(s):
+        if char != default_msg[index]:
+            count += 1
+    return count
